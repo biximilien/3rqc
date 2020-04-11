@@ -1,0 +1,26 @@
+%section.section.has-background-black#distribution
+  .container
+    .content.has-text-white
+      %figure.image.is-3by1
+        = image_tag 'distribution.png'
+      %h1.title.has-text-primary.has-text-centered  DISTRIBUTION DE SURPLUS ALIMENTAIRES
+      .columns
+        .column.is-8
+          %h2.subtitle.has-text-white Qui peut s'inscrire?
+          %p
+            Tout le monde qui veux participer à la réduction de la consommation à
+            la source, le réemploi des invendus d’épiceries, une meilleure gestion
+            de nos matières résiduelles au Québec ou tout simplement pour
+            encourager 3R Québec à demeurer un chef de file en GMR.
+
+        .column.is-4
+          %h2.subtitle.has-text-white.has-text-centered Comment peut-on s'inscire?
+          %p.has-text-centered
+            Téléphonez-nous au
+            %strong.has-text-white 819-635-8899 ext 102
+            %br/
+            %em ou
+            %br/
+            Cliquez ci-dessous&nbsp;:
+          .buttons.is-centered
+            = link_to "S'inscrire aux distributions", new_user_registration_path, class: 'button is-primary is-medium is-rounded'
