@@ -36,3 +36,40 @@
     margin-right: 0;
   }
 }
+
+#about {
+  .column {
+    display: flex;
+  }
+  
+  .padding-box {
+    background-size: cover;
+    background-position: 50% 50%;
+    background-color: $dark;
+    background-blend-mode: overlay;
+
+    h2.subtitle {
+      font-size: 1.75rem;
+      font-weight: 650;
+      text-shadow: 1px 1px rgba($light, 0.5);
+    }
+
+    p {
+      font-size: 1.25rem;
+      font-weight: 450;
+      text-shadow: 1px 1px rgba($light, 0.5);
+    }
+  }
+
+  #reduce {
+    background-image: image-url('reduce.png');
+  }
+
+  #reuse {
+    background-image: image-url('reuse.png');
+  }
+
+  #recycle {
+    background-image: image-url('recycle.png');
+  }
+}
