@@ -1,8 +1,14 @@
 #home {
   min-height: calc(100vh - #{$navbar-height});
+
+  #accueil {
+    min-height: calc(100vh - #{$navbar-height});
+  }
 }
 
 #transbordement {
+  min-height: 100vh;
+
   .content {
     padding-left: 10%;
     padding-right: 10%;
@@ -19,5 +25,14 @@
     min-height: 50vh;
     height: 100%;
     max-height: 100vh;
+  }
+}
+
+#distribution {
+  min-height: 100vh;
+
+  figure.image {
+    margin-left: 0;
+    margin-right: 0;
   }
 }

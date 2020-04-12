@@ -15,3 +15,84 @@ $primary: rgb(0, 117, 193);
 
 // Pages
 @import "pages/home";
+
+.padding-box {
+  padding: 2.5rem;
+}
+
+
+h1.title.has-text-primary {
+  text-shadow: 1px 1px $light;
+
+  &.has-lines {
+    &:before {
+      box-shadow: 1px 1px 1px $light;
+    }
+    &:after {
+      box-shadow: 1px 1px 1px $light;
+    }
+  }
+}
+
+.has-background-black {
+  h1.title.has-text-primary {
+    text-shadow: 1px 1px $dark;
+
+    &.has-lines {
+      &:before {
+        box-shadow: 1px 1px 1px $dark;
+      }
+      &:after {
+        box-shadow: 1px 1px 1px $dark;
+      }
+    }
+  }
+}
+
+.has-background-primary {
+  h1.title.has-text-white {
+    text-shadow: 1px 1px $dark;
+
+    &.has-lines {
+      &:before {
+        box-shadow: 1px 1px 1px $dark;
+      }
+      &:after {
+        box-shadow: 1px 1px 1px $dark;
+      }
+    }
+
+    &.has-lines {
+      text-shadow: none;
+
+      &:before, &:after {
+        border-bottom: 0.125rem solid $white;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+h1.title.has-lines {
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin-left:-100%;
+    border-bottom: 0.125rem solid $primary;
+    transform: translate3d(0, -0.6125rem, 0);
+  }
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin-right:-100%;
+    border-bottom: 0.125rem solid $primary;
+    transform: translate3d(0, -0.6125rem, 0);
+  }
+}
