@@ -2,7 +2,8 @@
   .columns.is-marginless
     .column.is-paddingless
       .content
-        %h1.has-text-primary.title Encombrants acceptés au centre de transbordement de 3R:
+        %h1.has-text-primary.title
+          Encombrants acceptés au centre de transbordement de 3R&nbsp;:
         %ul
           %li Appareils électriques ou à pile
           %li Appareils informatiques, imprimantes, cartouches d'encre (dans un sac)
@@ -22,14 +23,24 @@
         %p.has-text-centered
           %strong
             VEUILLEZ NOTER QUE NOUS N'EFFECTUONS PLUS DE RAMASSAGES À DOMICILE
-            POUR LES PARTICULIERS. POUR LE RAMASSAGE DE VOS GROS ENCOMBRANTS,
-            VEUILLEZ COMMUNIQUER AVEC LE 3-1-1.
+            POUR LES PARTICULIERS.
+
+        %p.has-text-centered
+          %strong
+            POUR LE RAMASSAGE DE VOS GROS ENCOMBRANTS, VEUILLEZ COMMUNIQUER AVEC
+            LE
+            %br/
+            %a{href: 'tel:311'}
+              %i.fas.fa-phone
+              3-1-1
 
         %p.has-text-centered
           %strong
             POUR TOUT AUTRE DEMANDE, SVP COMMUNIQUEZ AVEC NOUS
             %br/
-            819-635-8899
+            %a{href: 'tel:8196358899'}
+              %i.fas.fa-phone
+              819-635-8899
 
     .column.is-paddingless
       = image_tag 'transbordement.png'
