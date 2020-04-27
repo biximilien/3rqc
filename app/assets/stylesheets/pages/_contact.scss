@@ -1,8 +1,33 @@
 #contact {
-  #contact_form {
-    max-width: 600px;
+}
+
+
+#contact_form {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: $primary;
+
+  .button {
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .content {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  h1.title.has-lines {
+    &:before {
+      border-bottom: 0.25rem solid white;
+    }
+
+    &:after {
+      border-bottom: 0.25rem solid white;
+    }
   }
 }
