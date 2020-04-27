@@ -1,0 +1,16 @@
+#contact_form
+  = form_tag nil, {:method => 'post'} do
+    .columns
+      .column
+        .field
+          %input{:type => "name", :placeholder => "Nom"}
+        .field
+          %input{:type => "address", :placeholder => "Adresse"}
+        .field
+          %input{:type => "phone", :placeholder => "Numéro de téléphone"}
+        .field
+          %input{:type => "email", :placeholder => "Email"}
+      .column
+        .field
+          %textarea{:type => "message", :placeholder => "Message", :rows => "6"}
+    %input.button.is-primary{:type => 'submit', :value => "ENVOYEZ"}

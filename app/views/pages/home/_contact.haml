@@ -1,7 +1,7 @@
 %section.section#contact
   .container
     .content.has-text-centered
-      %h1.has-text-primary.title
+      %h1.has-text-primary.title.has-lines
         CONTACT
 
       %h2.subtitle Dépôt d'encombrants (RENDEZ-VOUS SEULEMENT)
@@ -31,6 +31,23 @@
       %p
         %a{href: 'tel:8196358899'} (819) 635-8899
 
-      %p
-        %strong
-          Heures d'ouverture du centre
+      %h2.subtitle Heures d'ouverture du centre
+
+      .box{style: 'width: 60%; margin: 1.5rem auto'}
+        %p
+          %strong{style: 'font-family: italic;'} Centre de Transbordement Communautaire
+          %p
+            Lundi-Vendredi &nbsp;:&emsp; 9am-2pm
+            %br
+            Samedi &nbsp;:&emsp; Fermé
+            %br
+            Dimanche &nbsp;:&emsp; Fermé
+
+      .box{style: 'width: 60%; margin: 1.5rem auto'}
+        %p
+          %strong{style: 'font-family: italic;'} Distribution de surplus alimentaire
+          %p
+            7 jours/semaine &nbsp;:&emsp; 5pm-9pm
+
+      %h2 Écrivez-nous!
+      = render 'shared/contact_form'
