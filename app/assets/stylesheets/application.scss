@@ -22,8 +22,11 @@ $primary: rgb(0, 117, 193);
 @import "pages/contact";
 @import "pages/don";
 @import "pages/maps";
+@import "pages/carousel";
 
-
+//SLICK
+@import "slick-carousel/slick/slick";
+@import "slick-carousel/slick/slick-theme";
 
 
 .padding-box {
