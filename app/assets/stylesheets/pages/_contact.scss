@@ -1,4 +1,23 @@
 #contact {
+  // padding-bottom: 3rem;
+  .centre_information {
+    text-align: center;
+    padding-bottom: 3rem;
+    img {
+      max-width: 200px;
+      padding-bottom: 10px;
+    }
+
+    .address {
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    h2 {
+      color: $primary;
+    }
+  }
+
 
 }
 
