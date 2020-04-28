@@ -13,9 +13,9 @@
       font-weight: 500;
     }
 
-    h2 {
-      color: $primary;
-    }
+  }
+  h2 {
+    color: $primary;
   }
 
 
@@ -49,5 +49,9 @@
     &:after {
       border-bottom: 0.25rem solid white;
     }
+  }
+
+  .textarea {
+    height: 100%;
   }
 }
