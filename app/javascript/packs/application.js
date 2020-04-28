@@ -18,7 +18,7 @@ import 'slick-carousel/slick/slick';
 // const imagePath = (name) => images(name, true)
 
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("turbolinks:load", () => {
 
   console.log("hey");
 
