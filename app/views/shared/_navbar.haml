@@ -13,7 +13,8 @@
         = link_to 'Accueil', root_path, class: 'navbar-item'
         = link_to 'Partenaires', '#partenaires', class: 'navbar-item'
         = link_to 'C.A.', ca_path, class: 'navbar-item'
-        = link_to 'Distribution', root_path(anchor: 'distribution'), class: 'navbar-item'
+        = link_to 'À propos de nous', about_path, class: 'navbar-item'
+        -# = link_to 'Distribution', root_path(anchor: 'distribution'), class: 'navbar-item'
 
       .navbar-end
         - if user_signed_in?
