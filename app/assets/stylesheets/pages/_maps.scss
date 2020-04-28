@@ -1,8 +1,17 @@
 
 
 #maps {
-
   iframe {
     height: 50vh;
   }
+
+  .overlay {
+     background:transparent;
+     position:relative;
+     width:100%;
+     height:50vh; /* your iframe height */
+     top:50vh;  /* your iframe height */
+     margin-top:-50vh;  /* your iframe height */
+  }
+
 }
