@@ -99,6 +99,10 @@ h1.title.has-lines {
     margin-left:-100%;
     border-bottom: 0.20rem solid $primary;
     transform: translate3d(0, -1.25rem, 0);
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &:after {
@@ -109,6 +113,10 @@ h1.title.has-lines {
     margin-right:-100%;
     border-bottom: 0.20rem solid $primary;
     transform: translate3d(0, -1.25rem, 0);
+
+    @include mobile {
+      display: none;
+    }
   }
 }
 
@@ -121,6 +129,10 @@ h1.title {
   font-weight: 500;
   letter-spacing: -0.125rem;
   padding-bottom: 2.5rem;
+
+  @include mobile {
+    font-size: 3rem;
+  }
 }
 
 .button {

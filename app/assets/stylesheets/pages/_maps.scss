@@ -1,4 +1,11 @@
 #boites {
+
+  .button {
+    @include mobile {
+      // max-width: 300px;
+      font-size: 14px;
+    }
+  }
 }
 
 #maps {

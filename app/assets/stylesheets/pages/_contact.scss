@@ -54,4 +54,11 @@
   .textarea {
     height: 100%;
   }
+
+  .button {
+    &:hover {
+      background-color: whitesmoke;
+      color: $primary;
+    }
+  }
 }

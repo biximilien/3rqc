@@ -31,6 +31,8 @@ document.addEventListener("turbolinks:load", () => {
     arrows: true,
     nextArrow: '<i class="fas fa-chevron-right"></i>',
     prevArrow: '<i class="fas fa-chevron-left"></i>',
+    swipeToSide: true,
+    initialSlide: 1,
     responsive: [{
       breakpoint: 1024,
       settings: {

@@ -4,6 +4,34 @@
   #accueil {
     min-height: calc(100vh - #{$navbar-height});
   }
+
+  h1.title {
+    @include mobile {
+      font-size: 2.25rem !important;
+      padding-bottom: 0px;
+    }
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+#don {
+  h1.title {
+    @include mobile {
+      font-size: 2.25rem !important;
+      padding-bottom: 0px;
+    }
+  }
+}
+
+#contact {
+    h1.title {
+      @include mobile {
+        padding-bottom: 1.5rem;
+    }
+  }
 }
 
 #transbordement {
@@ -22,6 +50,11 @@
     padding-right: 10%;
     padding-top: 3rem;
     padding-bottom: 3rem;
+
+    @include mobile {
+      padding-left: 5%;
+      padding-right: 5%;
+    }
   }
 
   img {
@@ -56,6 +89,12 @@
   figure.image {
     margin-left: 0;
     margin-right: 0;
+  }
+
+  h1.title {
+    @include mobile {
+      margin-top: 0;
+    }
   }
 }
 
