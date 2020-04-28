@@ -21,11 +21,19 @@
 
 }
 
-
 #contact_form {
   padding-top: 25px;
   padding-bottom: 25px;
   background-color: $primary;
+
+  .form-wrap {
+    width: 60%;
+    margin: 1.5rem auto;
+
+    @include mobile {
+      width: 80%;
+    }
+  }
 
   .button {
     display: block;
