@@ -1,13 +1,11 @@
 #don {
   background-color: whitesmoke;
 
-  //TODO
-  margin-bottom: -10px !important;
-
   .content {
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 3rem;
+    padding-bottom: 3rem;
     text-align: center;
 
   }
@@ -20,6 +18,13 @@
 
   p {
     font-size: 22px;
+  }
+
+  .homepage_image {
+    background-size: cover;
+    background-image: url("don.png");
+    height: 100%;
+    width: 100%;
   }
 
 
