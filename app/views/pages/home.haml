@@ -8,16 +8,19 @@
           -# %h2.subtitle
           -#   Bienvenue chez 3R Québec
           .buttons.is-centered
-            %a.button.is-primary.is-medium S'inscrire aux distributions
-            %a.button.is-primary.is-medium Centre de transbordement
-            %a.button.is-primary.is-medium Boîtes RÉCUP-TOUT
+            = link_to "S'inscrire aux distributions", root_path(anchor: 'distribution'), class: 'button is-primary is-medium is-rounded'
+            = link_to "Centre de Transbordement", root_path(anchor: 'transbordement'), class: 'button is-primary is-medium is-rounded'
+            = link_to "Boîtes RÉCUP-TOUT", root_path(anchor: 'boites'), class: 'button is-primary is-medium is-rounded'
+            -# %a.button.is-primary.is-medium S'inscrire aux distributions
+            -# %a.button.is-primary.is-medium Centre de transbordement
+            -# %a.button.is-primary.is-medium Boîtes RÉCUP-TOUT
 
   -# = render 'pages/home/about'
   -# = render 'pages/home/mission'
   = render 'pages/home/help'
   = render 'pages/home/distribution'
   = render 'pages/home/transbordement'
-  = render 'pages/home/contact'
-  = render 'pages/home/don'
   = render 'pages/home/boites'
+  = render 'pages/home/contact'
+  -# = render 'pages/home/don'
   -# = render 'pages/home/carousel'
