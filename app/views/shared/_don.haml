@@ -1,0 +1,29 @@
+%section.section.is-paddingless#don
+  .columns.is-marginless
+    .column.is-paddingless
+      .homepage_image
+      -# = image_tag 'don.png', class: "homepage_image"
+
+
+
+    .column.is-paddingless
+      .content
+        %h1.has-text-primary.title SUPPORTEZ NOTRE CAUSE
+        %p
+          Votre support et contributions sont très importantes pour nous afin
+          de soutenir la lutte au gaspillage en tout genre.
+        %p
+          Merci de donner généreusement en argent, en temps ou dans l'une
+          de nos boites RÉCUP-TOUT géolocalisées plus bas sur cette page.
+        %p
+          De nous tous à 3R Québec, un gros merci!
+        %br
+
+        %form{:action => "https://www.paypal.com/cgi-bin/webscr", :method => "post", :target => "_top"}
+          %input{:name => "cmd", :type => "hidden", :value => "_donations"}/
+          %input{:name => "business", :type => "hidden", :value => "simonboudreau77@hotmail.com"}/
+          %input{:name => "item_name", :type => "hidden", :value => "3R Quebec Inc"}/
+          %input{:name => "currency_code", :type => "hidden", :value => "CAD"}/
+          %input.button.is-primary.is-large.is-rounded{:type => 'submit', :value => "DONS EN ARGENT"}
+
+          = image_tag 'cc-badges.png', class: "cc-badges is-center"

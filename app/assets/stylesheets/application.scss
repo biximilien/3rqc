@@ -13,8 +13,23 @@ $primary: rgb(0, 117, 193);
 @import "sessions";
 @import "registrations";
 
+@import "customs";
+
 // Pages
 @import "pages/home";
+@import "pages/about";
+
+// Home
+@import "pages/contact";
+@import "pages/don";
+@import "pages/maps";
+@import "pages/carousel";
+
+
+//SLICK
+@import "slick-carousel/slick/slick";
+@import "slick-carousel/slick/slick-theme";
+
 
 .padding-box {
   padding: 2.5rem;
@@ -82,8 +97,12 @@ h1.title.has-lines {
     width: 100%;
     height: 100%;
     margin-left:-100%;
-    border-bottom: 0.25rem solid $primary;
+    border-bottom: 0.20rem solid $primary;
     transform: translate3d(0, -1.25rem, 0);
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &:after {
@@ -92,8 +111,12 @@ h1.title.has-lines {
     width: 100%;
     height: 100%;
     margin-right:-100%;
-    border-bottom: 0.25rem solid $primary;
+    border-bottom: 0.20rem solid $primary;
     transform: translate3d(0, -1.25rem, 0);
+
+    @include mobile {
+      display: none;
+    }
   }
 }
 
@@ -106,4 +129,13 @@ h1.title {
   font-weight: 500;
   letter-spacing: -0.125rem;
   padding-bottom: 2.5rem;
+
+  @include mobile {
+    font-size: 3rem;
+  }
+}
+
+.button {
+  font-weight: 600;
+  text-transform: uppercase;
 }

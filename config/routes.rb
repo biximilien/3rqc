@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   devise_for :users
 
   get 'ca', to: 'pages#ca'
+  get 'a-propos-de-nous', to: 'pages#about'
+
 end

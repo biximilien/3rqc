@@ -1,0 +1,29 @@
+#carousel {
+
+  #images_carousel {
+    img {
+      max-height: 500px !important;
+      height: 500px !important;
+      padding: 10px;
+    }
+
+    .slick-arrow {
+      color: $primary;
+      font-size: 64px;
+      position: absolute;
+      top: 45%;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .fa-chevron-left {
+      left: -50px;
+    }
+
+    .fa-chevron-right {
+      right: -50px;
+    }
+  }
+}

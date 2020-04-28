@@ -1,36 +1,110 @@
 %section.section#contact
   .container
     .content.has-text-centered
-      %h1.has-text-primary.title
+      %h1.has-text-primary.title.has-lines
         CONTACT
 
       %h2.subtitle Dépôt d'encombrants (RENDEZ-VOUS SEULEMENT)
 
-      %p NOUS N'ACCEPTERONS PLUS LES DÉPÔTS DE MEUBLES ET MATELAS.
+      %p.font-22 NOUS N'ACCEPTERONS PLUS LES DÉPÔTS DE MEUBLES ET MATELAS.
 
-      %p MERCI DE VOTRE COLLABORATION ET VOTRE SUPPORT!
+      %p.font-22 MERCI DE VOTRE COLLABORATION ET VOTRE SUPPORT!
 
       %h2.subtitle 3R Québec Inc
-
-      .box.has-text-left{style: 'width: 60%; margin: 1.5rem auto'}
-        %p
-          %strong CENTRE DE TRANSBORDEMENT
-          &nbsp;:&emsp;
-          600 Maloney Est (Pépinière Emery), Gatineau, Qc
-
-        %p
-          %strong CENTRE DE TRIAGE ALIMENTAIRE
-          &nbsp;:&emsp;
-          380 Notre Dame, Gatineau
-
-        %p
-          %strong CENTRE DE DISTRIBUTION ALIMENTAIRE
-          &nbsp;:&emsp;
-          373-A Notre Dame, Gatineau, Qc
-
       %p
         %a{href: 'tel:8196358899'} (819) 635-8899
+      %br
+      %br
 
-      %p
-        %strong
-          Heures d'ouverture du centre
+
+      .columns
+        .column
+          .centre_information
+            = image_tag "trash.svg"
+            %h2.title
+              CENTRE DE TRANSBORDEMENT
+            .address
+              600 Maloney Est (Pépinière Emery), Gatineau, Qc
+            %br
+            %p
+              Lundi-Vendredi &nbsp;:&emsp; 9am-2pm
+              %br
+              Samedi &nbsp;:&emsp; Fermé
+              %br
+              Dimanche &nbsp;:&emsp; Fermé
+
+        .column
+          .centre_information
+            = image_tag "food-delivery.svg"
+            %h2.title
+              CENTRE DE DISTRIBUTION ALIMENTAIRE
+            .address
+              373-A Notre Dame, Gatineau, Qc
+            %br
+            %p
+              7 jours/semaine &nbsp;:&emsp; 5pm-9pm
+        .column
+          .centre_information
+            = image_tag "paper-bag.svg"
+            %h2.title
+              CENTRE DE TRIAGE ALIMENTAIRE
+            .address
+              380 Notre Dame, Gatineau
+
+
+
+
+
+
+
+
+    -# .content.has-text-centered
+    -#   %h1.has-text-primary.title.has-lines
+    -#     CONTACT
+    -#
+    -#   %h2.subtitle Dépôt d'encombrants (RENDEZ-VOUS SEULEMENT)
+    -#
+    -#   %p NOUS N'ACCEPTERONS PLUS LES DÉPÔTS DE MEUBLES ET MATELAS.
+    -#
+    -#   %p MERCI DE VOTRE COLLABORATION ET VOTRE SUPPORT!
+    -#
+    -#   %h2.subtitle 3R Québec Inc
+    -#
+    -#   .box.has-text-left{style: 'width: 60%; margin: 1.5rem auto'}
+    -#     %p
+    -#       %strong CENTRE DE TRANSBORDEMENT
+    -#       &nbsp;:&emsp;
+    -#       600 Maloney Est (Pépinière Emery), Gatineau, Qc
+    -#
+    -#     %p
+    -#       %strong CENTRE DE TRIAGE ALIMENTAIRE
+    -#       &nbsp;:&emsp;
+    -#       380 Notre Dame, Gatineau
+    -#
+    -#     %p
+    -#       %strong CENTRE DE DISTRIBUTION ALIMENTAIRE
+    -#       &nbsp;:&emsp;
+    -#       373-A Notre Dame, Gatineau, Qc
+    -#
+    -#   %p
+    -#     %a{href: 'tel:8196358899'} (819) 635-8899
+    -#
+    -#   %h2.subtitle Heures d'ouverture du centre
+    -#
+    -#   .box{style: 'width: 60%; margin: 1.5rem auto'}
+    -#     %p
+    -#       %strong{style: 'font-family: italic;'} Centre de Transbordement Communautaire
+    -#       %p
+    -#         Lundi-Vendredi &nbsp;:&emsp; 9am-2pm
+    -#         %br
+    -#         Samedi &nbsp;:&emsp; Fermé
+    -#         %br
+    -#         Dimanche &nbsp;:&emsp; Fermé
+    -#
+    -#   .box{style: 'width: 60%; margin: 1.5rem auto'}
+    -#     %p
+    -#       %strong{style: 'font-family: italic;'} Distribution de surplus alimentaire
+    -#       %p
+    -#         7 jours/semaine &nbsp;:&emsp; 5pm-9pm
+
+= render 'shared/contact_form'

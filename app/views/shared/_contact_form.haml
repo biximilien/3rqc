@@ -1,0 +1,22 @@
+%section.section#contact_form.is-paddingless
+  .container
+    .content
+      %h1.title.has-text-centered.has-text-white.has-lines
+        Écrivez-nous!
+      .form-wrap
+        = form_tag nil, {:method => 'post'} do
+          .columns
+            .column
+              .field
+                %input.input.is-medium{:type => "text", :placeholder => "Nom"}
+              .field
+                %input.input.is-medium{:type => "text", :placeholder => "Adresse"}
+              .field
+                %input.input.is-medium{:type => "text", :placeholder => "Numéro de téléphone"}
+              .field
+                %input.input.is-medium{:type => "email", :placeholder => "Email"}
+            .column
+              .field
+                %textarea.textarea.is-medium{:type => "message", :placeholder => "Message"}
+          .control
+            %input.button.is-primary-inverted.is-medium.is-rounded{:type => 'submit', :value => "ENVOYEZ"}

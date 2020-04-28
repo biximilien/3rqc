@@ -1,0 +1,19 @@
+%section.section#boites
+  .container
+    .content.has-text-centered
+      %h1.has-text-primary.title.has-lines
+        LES BOÎTES RÉCUP-TOUT
+      .columns
+        .column.is-3
+        .column.is-6
+          %p.font-22
+            Les boîtes RÉCUP-TOUT servent à recueillir les dons matériels,
+            les vêtements et les autres articles usagés
+            à des fins de réemploi ou de recyclage.
+          %p.font-22
+            Vous pouvez trouver les boîtes aux quatre coins de la région,
+            tel qu'indiqué sur la carte ci-dessous.
+          = link_to "Signalez le ramassage d'une boîte", root_path(anchor:'contact_form'), class: 'button is-primary is-medium is-rounded'
+        .column.is-3
+
+= render "shared/maps"
