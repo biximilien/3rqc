@@ -8,5 +8,6 @@ Rails.application.routes.draw do
 
   get 'ca', to: 'pages#ca'
   get 'a-propos-de-nous', to: 'pages#about'
+  get 'rendez-vous', to:'pages#rendez_vous'
 
 end

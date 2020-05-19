@@ -57,6 +57,8 @@ gem 'devise'
 gem 'cancancan'
 gem 'foreman'
 gem 'haml'
+gem "simple_calendar", "~> 2.0"
+
 group :development, :test do
   gem 'rspec-rails', '~> 4.0.0'
 end
