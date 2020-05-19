@@ -1,0 +1,10 @@
+
+.container
+  .simple-calendar
+    = week_calendar events: @bookings do |date, bookings|
+      = date
+      - bookings.each do |booking|
+        %div
+          = booking.name
+          = booking.email
+          = booking.start_time.strftime("%H:%M")
