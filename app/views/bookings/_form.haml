@@ -11,13 +11,13 @@
     = form.label :name
     = form.text_field :name
   .field
-    = form.label :start_time
-    = form.datetime_select :start_time
+    = form.label :phone
+    = form.text_field :phone
   .field
     = form.label :email
     = form.text_field :email
   .field
-    = form.label :phone
-    = form.text_field :phone
+    = form.label :start_time
+    = form.datetime_select :start_time, :minute_step => 15, :start_hour => 17, :end_hour => 20
   .actions
     = form.submit

@@ -62,21 +62,21 @@
   .wday-6 {}
 
   .today {
-    background: #FFFFC0
+    background: whitesmoke;
+
+    .past {}
+    .future {}
+
+    .start-date {}
+
+    .prev-month {
+      background: #DDD;
+    }
+    .next-month {
+      background: #DDD;
+    }
+    .current-month {}
+
+    .has-events {}
   }
-
-  .past {}
-  .future {}
-
-  .start-date {}
-
-  .prev-month {
-    background: #DDD;
-  }
-  .next-month {
-    background: #DDD;
-  }
-  .current-month {}
-
-  .has-events {}
 }
