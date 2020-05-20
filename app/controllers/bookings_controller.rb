@@ -12,14 +12,20 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.save
-
     if @booking.persisted?
       flash[:notice] = "Votre rendez-vous a été ajouté à l'horaire! À bientôt."
       redirect_to bookings_path
     else
       respond_with(@booking)
     end
+  end
 
+  def destroy
+    if admin_user_signed_in?
+      @booking = Booking.find(params[:id])
+      @booking.destroy
+      redirect_to admin_root_path
+    end
   end
 
   private
