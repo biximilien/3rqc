@@ -2,6 +2,13 @@
 #rendez-vous-index {
   min-height: calc(100vh - #{$navbar-height});
 
+  #notice {
+    margin-top: 3.125rem;
+    border: 2px solid $primary;
+    background-color: whitesmoke;
+    padding: 2.25rem;
+  }
+
   .button {
     max-width: 400px;
     margin-top: 3.125rem;
@@ -10,6 +17,10 @@
 
   .has-text-primary {
     color: $primary;
+  }
+
+  h1.title {
+    margin-top: 3.125rem;
   }
 }
 
@@ -27,9 +38,15 @@
     margin-bottom: 3.125rem;
   }
 
+  h1.title {
+    margin-top: 3.125rem;
+  }
+
 }
 
 .simple-calendar {
+  padding-bottom: 6.25rem;
+
   table {
     -webkit-border-horizontal-spacing: 0px;
     -webkit-border-vertical-spacing: 0px;

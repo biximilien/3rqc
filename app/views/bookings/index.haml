@@ -1,8 +1,8 @@
 %section#rendez-vous-index
   .container
     .content
-      %p#notice.has-text-primary.is-size-3= notice
-
+      - if notice
+        %p#notice.has-text-primary.is-size-3= notice
       %h1.title.has-text-primary.has-text-centered.has-lines
         PRENEZ RENDEZ-VOUS
       %p.has-text-centered
