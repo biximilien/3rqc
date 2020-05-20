@@ -1,10 +1,26 @@
-class BookingsController < InheritedResources::Base
+
+class BookingsController < ApplicationController
+  respond_to :html
+
+  def index
+    @bookings = Booking.all
+  end
+
+  def new
+    @booking = Booking.new
+  end
 
   def create
-    flash[:notice] = "Votre rendez-vous a été ajouté à l'horaire! À bientôt."
-    create! do |format|
-      format.html { redirect_to bookings_path }
+    @booking = Booking.new(booking_params)
+    @booking.save
+
+    if @booking.persisted?
+      flash[:notice] = "Votre rendez-vous a été ajouté à l'horaire! À bientôt."
+      redirect_to bookings_path
+    else
+      respond_with(@booking)
     end
+
   end
 
   private
