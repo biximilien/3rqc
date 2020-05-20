@@ -1,0 +1,19 @@
+
+.container
+  .simple-calendar
+    - @bookings = Booking.all
+    = week_calendar events: @bookings do |date, bookings|
+      = date
+      - bookings.each do |booking|
+        %div
+          .booking-information
+            %strong= booking.start_time.strftime("%H:%M")
+            %br
+            = booking.name
+            %br
+            - if booking.phone?
+              = booking.phone
+              %br
+            = booking.email
+            %br
+            = link_to "Supprimer", booking_path(booking), method: :delete, data: {confirm: "Are you sure?"}
