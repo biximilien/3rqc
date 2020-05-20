@@ -2,6 +2,7 @@
   .container
     .content
       %p#notice.has-text-primary.is-size-3= notice
+
       %h1.title.has-text-primary.has-text-centered.has-lines
         PRENEZ RENDEZ-VOUS
       %p.has-text-centered
@@ -9,4 +10,4 @@
       %p.has-text-centered Le Centre de Distribution Alimentaire est ouvert 7 jours sur 7, de 5 heure à 21 heure.
       = link_to "S'inscrire à l'horaire", new_booking_path, class: "button is-primary is-center is-large"
 
-  = render 'calendar', booking: @booking
+  = render partial: 'calendar', locals: { booking: @bookings }

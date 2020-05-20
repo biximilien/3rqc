@@ -1,11 +1,10 @@
 .simple-calendar
   .calendar-heading
-    -# = link_to "Semaine précédente", calendar.url_for_previous_view
     - if calendar.number_of_weeks == 1
       %span.calendar-title
         Semaine du
         %strong.is-uppercase
-          #{date_range.first.day} #{ t('date.month_names')[start_date.month] } #{ start_date.year }
+          #{date_range.first.day} #{ t('date.month_names')[date_range.first.month] } #{ start_date.year }
     - else
       %span.calendar-title
         Semaine #{calendar.week_number} - #{calendar.end_week}
