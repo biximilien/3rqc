@@ -14,7 +14,7 @@
         = link_to 'Partenaires', root_path(anchor: 'partenaires'), class: 'navbar-item'
         = link_to 'C.A.', ca_path, class: 'navbar-item'
         = link_to 'À propos de nous', a_propos_de_nous_path, class: 'navbar-item'
-        -# = link_to 'Distribution', root_path(anchor: 'distribution'), class: 'navbar-item'
+        = link_to 'Prendre rendez-vous', bookings_path, class: 'navbar-item'
 
       .navbar-end
         - if user_signed_in?

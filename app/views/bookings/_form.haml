@@ -1,0 +1,26 @@
+
+
+= form_with(model: booking, local: true) do |form|
+  - if booking.errors.any?
+    #error_explanation
+      %h2
+        Votre rendez-vous ne peut être enregistré.
+      %ul
+        - booking.errors.each do |attr, msg|
+          %li= msg
+      %br
+
+  .field
+    = form.label :nom
+    = form.text_field :name, :required => true
+  .field
+    = form.label :numéro
+    = form.text_field :phone
+  .field
+    = form.label :email
+    = form.email_field :email, :required => true
+  .field
+    = form.label :plage_horaire
+    = form.datetime_select :start_time, :minute_step => 15, :start_hour => 17, :end_hour => 20
+  .actions
+    = form.submit "Ajoutez à l'horaire", class: 'button is-large is-primary'

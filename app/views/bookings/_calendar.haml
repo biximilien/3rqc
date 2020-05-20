@@ -1,0 +1,12 @@
+
+.container
+  .simple-calendar
+    = week_calendar events: @bookings do |date, bookings|
+      = date
+      - bookings.each do |booking|
+        %div
+          - if admin_user_signed_in?
+            = booking.name
+          - else
+            %strong= "Réservé"
+          = booking.start_time.strftime("%H:%M")

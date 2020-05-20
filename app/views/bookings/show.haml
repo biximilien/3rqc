@@ -1,0 +1,25 @@
+%section#rendez-vous
+  .container
+    .content
+    %p#notice= notice
+    %h1.title.has-text-primary.has-text-centered.has-lines
+      VOTRE RENDEZ-VOUS A ÉTÉ AJOUTÉ À L'HORAIRE
+    %p
+      %strong Nom:
+      = @booking.name
+    %p
+      %strong Date:
+      = @booking.start_time
+    %p
+      %strong Email:
+      = @booking.email
+    %p
+      - if !(@booking.phone.empty?)
+        %strong Numéro de téléphone:
+        = @booking.phone
+
+    %br
+
+    = link_to 'Modifier', edit_booking_path(@booking)
+    |
+    \#{link_to 'Retour', bookings_path}
