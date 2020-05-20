@@ -1,0 +1,8 @@
+%section#rendez-vous-form
+  .container
+    .content
+      %p#notice= notice
+      %h1.title.has-text-primary.has-text-centered.has-lines
+        NOUVEAU RENDEZ-VOUS
+      = render 'form', booking: @booking
+      = link_to 'Retour', bookings_path

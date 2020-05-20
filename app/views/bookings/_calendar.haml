@@ -5,6 +5,8 @@
       = date
       - bookings.each do |booking|
         %div
-          = booking.name
-          = booking.email
+          - if admin_user_signed_in?
+            = booking.name
+          - else
+            %strong= "Réservé"
           = booking.start_time.strftime("%H:%M")

@@ -1,28 +1,12 @@
-%section#rendez-vous
+%section#rendez-vous-index
   .container
     .content
-      %p#notice= notice
+      %p#notice.has-text-primary.is-size-3= notice
       %h1.title.has-text-primary.has-text-centered.has-lines
         PRENEZ RENDEZ-VOUS
-      %table
-        %thead
-          %tr
-            %th Name
-            %th Start time
-            %th Email
-            %th Phone
-            %th{:colspan => "3"}
-        %tbody
-          - @bookings.each do |booking|
-            %tr
-              %td= booking.name
-              %td= booking.start_time
-              %td= booking.email
-              %td= booking.phone
-              %td= link_to 'Show', booking
-              %td= link_to 'Edit', edit_booking_path(booking)
-              %td= link_to 'Destroy', booking, method: :delete, data: { confirm: 'Are you sure?' }
-      %br/
-      = link_to 'New Booking', new_booking_path, class: "button is-primary"
+      %p.has-text-centered
+        Inscrivez vous à l'horaire afin de nous permettre de mieux vous servir.
+      %p.has-text-centered Le Centre de Distribution Alimentaire est ouvert 7 jours sur 7, de 5 heure à 21 heure.
+      = link_to "S'inscrire à l'horaire", new_booking_path, class: "button is-primary is-center is-large"
 
   = render 'calendar', booking: @booking

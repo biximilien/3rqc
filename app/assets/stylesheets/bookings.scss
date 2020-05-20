@@ -1,5 +1,32 @@
-#rendez-vous {
-  min-height: 100vh;
+
+#rendez-vous-index {
+  min-height: calc(100vh - #{$navbar-height});
+
+  .button {
+    max-width: 400px;
+    margin-top: 3.125rem;
+    margin-bottom: 3.125rem;
+  }
+
+  .has-text-primary {
+    color: $primary;
+  }
+}
+
+#rendez-vous-form {
+  min-height: calc(100vh - #{$navbar-height});
+
+  label {
+    font-weight: 600;
+    color: $primary;
+    text-transform: uppercase;
+  }
+
+  .button {
+    margin-top: 3.125rem;
+    margin-bottom: 3.125rem;
+  }
+
 }
 
 .simple-calendar {
@@ -18,6 +45,7 @@
     border-collapse: collapse;
   }
 
+
   th {
     padding: 6px;
     border-bottom: 2px solid rgb(221, 221, 221);
@@ -26,7 +54,9 @@
     border-right: 1px solid rgb(221, 221, 221);
     border-top: 0px none rgb(51, 51, 51);
     box-sizing: border-box;
-    text-align: left;
+    text-align: center !important;
+    color: $primary !important;
+    font-weight: 600 !important;
   }
 
   td {
