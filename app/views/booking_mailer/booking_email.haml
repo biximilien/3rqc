@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+  %body
+    %h1
+      Vous avez un nouveau booking.
+    %p
+      #{ @booking.name } a confirmé un rendez-vous le
+      %strong= @booking.start_time
+    %p
+      = @booking.name
+      %br
+      = @booking.email
+      - if @booking.phone
+        = @booking.phone
