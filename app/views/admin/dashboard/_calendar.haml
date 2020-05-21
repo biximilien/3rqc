@@ -9,11 +9,11 @@
           .booking-information
             %strong= booking.start_time.strftime("%H:%M")
             %br
-            = booking.name
+            = "Nom: " + booking.name
             %br
             - if booking.phone?
-              = booking.phone
+              = "Tel.: " + booking.phone
               %br
-            = booking.email
+            = "Email: " + booking.email
             %br
             = link_to "Supprimer", booking_path(booking), method: :delete, data: {confirm: "Are you sure?"}
