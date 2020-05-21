@@ -16,4 +16,5 @@
               %br
             = "Email: " + booking.email
             %br
-            = link_to "Supprimer", booking_path(booking), method: :delete, data: {confirm: "Are you sure?"}
+            = link_to "Modifier", edit_admin_booking_path(booking)
+            = link_to "Supprimer", admin_booking_path(booking), method: :delete, data: {confirm: "Êtes-vous sûr?"}

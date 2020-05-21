@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
 
-  resources :bookings, only: [:new, :create, :index, :destroy]
+  root to: 'pages#home'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  root to: 'pages#home'
 
   devise_for :users
 
+  resources :bookings, only: [:new, :create, :index]
+
   get 'ca', to: 'pages#ca'
   get 'a-propos-de-nous', to: 'pages#about'
-
-
 
 end

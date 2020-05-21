@@ -2,17 +2,12 @@ ActiveAdmin.register_page "Dashboard" do
   menu priority: 1, label: proc { I18n.t("active_admin.dashboard") }
 
   content title: proc { I18n.t("active_admin.dashboard") } do
-    div class: "blank_slate_container", id: "dashboard_default_message" do
-      span class: "blank_slate" do
-        span "Bienvenue chez 3R Québec"
-        small I18n.t("active_admin.dashboard_welcome.call_to_action")
-      end
+    h1 class: 'title' do
+      'Réservations pour les distributions'
     end
 
-
-  render partial: 'calendar', locals: { booking: @bookings }
-
-
+    # render bookings calendar
+    render partial: 'calendar', locals: { booking: @bookings }
 
   end # content
 end
