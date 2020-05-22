@@ -4,19 +4,21 @@
       %h1.title.has-text-centered.has-text-white.has-lines
         Écrivez-nous!
       .form-wrap
-        = form_tag nil, {:method => 'post'} do
+        = form_tag(send_mail_path) do
           .columns
             .column
               .field
-                %input.input.is-medium{:type => "text", :placeholder => "Nom"}
+                %input.input.is-medium{:name => "name", :type => "text", :placeholder => "Nom", :required => true}
               .field
-                %input.input.is-medium{:type => "text", :placeholder => "Adresse"}
+                %input.input.is-medium{:name => "address", :type => "text", :placeholder => "Adresse"}
               .field
-                %input.input.is-medium{:type => "text", :placeholder => "Numéro de téléphone"}
+                %input.input.is-medium{:name => "phone", :type => "text", :placeholder => "Numéro de téléphone"}
               .field
-                %input.input.is-medium{:type => "email", :placeholder => "Email"}
+                %input.input.is-medium{:name => "email", :type => "email", :placeholder => "Email", :required => true}
             .column
               .field
-                %textarea.textarea.is-medium{:type => "message", :placeholder => "Message"}
+                %textarea.textarea.is-medium{:name => "message", :type => "text", :placeholder => "Message", :required => true}
           .control
             %input.button.is-primary-inverted.is-medium.is-rounded{:type => 'submit', :value => "ENVOYEZ"}
+      - if notice
+        %p#notice.has-text-light.has-text-weight-bold.is-size-3= notice

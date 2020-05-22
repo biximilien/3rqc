@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+  %body
+    %h1
+      = @name + "vous a écrit."
+    %p
+      = @message
+    %p
+      = @name
+      %br
+      - if @address
+        = @address
+      %br
+      - if @phone
+        = @phone
+      %br
+      = @email

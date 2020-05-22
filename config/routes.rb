@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   get 'ca', to: 'pages#ca'
   get 'a-propos-de-nous', to: 'pages#about'
 
+  match '/send_mail', to: 'contact#send_mail', via: 'post'
 end
