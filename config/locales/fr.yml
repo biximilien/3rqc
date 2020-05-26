@@ -7,3 +7,8 @@ fr:
   simple_calendar:
     next: Suivant
     previous: Précedent
+
+  devise:
+    sessions:
+      admin_user:
+        signed_in: Bievenue sur la plateforme administrative de 3RQC.
