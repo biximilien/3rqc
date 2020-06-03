@@ -2,15 +2,62 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+
+    :css
+      #outlook a {padding:0;}
+      body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;}
+      .ReadMsgBody {width: 100%;}
+      .ExternalClass {width:100%;}
+      .backgroundTable {margin:0 auto; padding:0; width:100%;!important;}
+      table td {border-collapse: collapse;}
+      .ExternalClass * {line-height: 115%;}
+
+      /* End reset */
+      @media screen and (max-width: 630px) {
+          *[class="container"] { width: 320px !important; padding:0px !important}
+          *[class="mobile-column"] {display: block;}
+          *[class="mob-column"] {float: none !important;width: 100% !important;}
+          *[class="mobile-padding"] {padding-left:10px !important;padding-right:10px !important;}
+          *[class="hide"] {display:none !important;}
+          *[class="100p"] {width:100% !important; height:auto !important;}
+      		*[class="mobile-column-blog"] {padding-bottom:20px;display:block;}
+      }
+
+      @media screen and (max-width: 450px){
+        *[class="mobhide"] {display:none !important;}
+        *[class="font-bump"] {font-size:16px !important;}
+        *[class="link-bump"] {font-size:21px !important;}
+        *[class="100p-mob"] {width:100% !important; height:auto !important;}
+      }
+
   %body
-    %h1
-      Vous avez un nouveau booking.
-    %p
-      #{ @booking.name } a confirmé un rendez-vous le
-      %strong= @booking.start_time
-    %p
-      = @booking.name
-      %br
-      = @booking.email
-      - if @booking.phone
-        = @booking.phone
+    %table{border: "0", cellpadding: "0", cellspacing: "0", class: "mobile-padding", style: "margin: 0; padding: 0", width: "100%"}
+      %tr
+        %td{align: 'center', valign: 'top', colspan: '3'}
+          = image_tag image_url('3rqc-logo-400x400.png')
+      %tr
+        %td
+        %td{align: 'center'}
+          %h1 Vous avez un nouveau rendez-vous pour une distribution
+        %td
+
+      %tr
+        %td{width: '20%'}
+        %td{align: 'center'}
+          %table{border: "0", cellpadding: "0", cellspacing: "0", class: "mobile-padding", style: "margin: 0; padding: 0", width: "100%"}
+            %tr
+              %td
+              %td
+                %p
+                  #{ @booking.name } a confirmé un rendez-vous le
+                  %strong= l(@booking.start_time)
+                %p
+                  %strong= @booking.name
+
+                  %br
+
+                  = @booking.email
+                  - if @booking.phone
+                    = link_to "(#{@booking.phone})", "tel:#{@booking.phone}"
+              %td
+        %td{width: '20%'}

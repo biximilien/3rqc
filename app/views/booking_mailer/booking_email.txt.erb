@@ -1,0 +1,10 @@
+Vous avez un nouveau rendez-vous pour une distribution
+
+<%= @booking.name %> a confirmé un rendez-vous le
+<%= I18n.l(@booking.start_time) %>
+
+<%= @booking.name %>
+<%= @booking.email %>
+<% if @booking.phone %>
+  <%= @booking.phone %>
+<% end %>
