@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.save
     if @booking.persisted?
-      BookingMailer.with(booking: @booking).booking_email.deliver_now
+      BookingMailer.with(booking: @booking).booking_email.deliver_later
       flash[:notice] = "Votre rendez-vous a été ajouté à l'horaire! À bientôt."
       redirect_to bookings_path
     else
